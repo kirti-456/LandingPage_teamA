@@ -7,3 +7,11 @@ function closeVideo() {
     document.getElementById('videoOverlay').style.display = 'none';
     document.getElementById('youtubeVideo').src = ''; // Stop the video
 }
+window.onscroll = function () {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+};

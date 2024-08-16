@@ -224,3 +224,160 @@ body{
     margin-top: 60px;
 }
 
+/* shambhavi */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    transition: background-color 0.5s ease;
+}
+
+.navbar.fixed-top.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Translucent black when scrolled */
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link.special {
+    font-weight: bold;
+    color: #f8f9fa; /* Slightly different color for special link */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Center the navbar items */
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e9ecef; /* Lighter color on hover */
+}
+
+/* Responsive Toggler Icon */
+.navbar-toggler {
+    border: none;
+}
+
+@media (max-width: 992px) {
+    .navbar,.navbar-nav {
+        text-align: center;
+        background: rgba(9, 9, 10, 0.906);
+    }
+}
+
+/* Header Styles */
+.header {
+    height: 100vh;
+    background-image: url('../images/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align to the left */
+    padding-left: 10%; /* Adjust padding to position the content */
+}
+
+.header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 600px;
+    padding-top: 0; /* Remove extra top padding */
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.header p {
+    font-size: 1.125rem;
+    margin-bottom: 40px;
+}
+
+.header .btn-primary {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+.header .btn-primary:hover {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+/* Device Image Styles */
+.header-device {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 440px;
+    height: auto;
+    z-index: 1;
+    transform: translate(25%, 20%); /* Adjust position */
+}
+
+/* Header Content Adjustments */
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 45%; /* Adjust width to control overlap */
+}
+
+@media (max-width: 768px) {
+    .header-device {
+        display: none; /* Hide device image on smaller screens */
+    }
+
+    .header-content {
+        max-width: 100%; /* Full width for text on smaller screens */
+        text-align: center; /* Center text on small screens */
+    }
+
+    .header {
+        padding-left: 20px;
+    }
+}
